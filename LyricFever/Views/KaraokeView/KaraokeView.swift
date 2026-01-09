@@ -103,7 +103,7 @@ struct KaraokeView: View {
             } else {
                 if !viewmodel.romanizedLyrics.isEmpty {
                     Text(verbatim: viewmodel.romanizedLyrics[currentlyPlayingLyricsIndex])
-                } else if !viewmodel.furiganaAnnotaions.isEmpty {
+                } else if !viewmodel.furiganaAnnotaions.isEmpty && !viewmodel.furiganaAnnotaions[currentlyPlayingLyricsIndex].isEmpty {
                     furiganaView(currentlyPlayingLyricsIndex)
                 } else if !viewmodel.chineseConversionLyrics.isEmpty {
                     Text(verbatim: viewmodel.chineseConversionLyrics[currentlyPlayingLyricsIndex])
